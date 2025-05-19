@@ -1,0 +1,984 @@
+2025-05-19 09:24:50.901 +05:00 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 09:24:50.928 +05:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 09:24:50.930 +05:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 09:25:50.032 +05:00 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 09:25:50.061 +05:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 09:25:50.062 +05:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 09:25:50.328 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-05-19 09:25:50.337 +05:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-05-19 09:25:50.352 +05:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-05-19 09:25:50.402 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-05-19 09:25:50.410 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-05-19 09:25:50.412 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-05-19 09:25:50.422 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-05-19 09:25:50.430 +05:00 [INF] No migrations were applied. The database is already up to date.
+2025-05-19 09:25:50.440 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2025-05-19 09:26:14.051 +05:00 [INF] User profile is available. Using 'C:\Users\muham\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-19 09:26:14.171 +05:00 [INF] Now listening on: http://localhost:5065
+2025-05-19 09:26:14.174 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-19 09:26:14.175 +05:00 [INF] Hosting environment: Development
+2025-05-19 09:26:14.176 +05:00 [INF] Content root path: C:\C#\AtirUz
+2025-05-19 09:31:02.476 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/ - null null
+2025-05-19 09:31:02.519 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-19 09:31:02.556 +05:00 [INF] HTTP GET / responded 404 in 36.9094 ms
+2025-05-19 09:31:02.568 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/ - 404 0 null 92.6202ms
+2025-05-19 09:31:02.576 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5065/, Response status code: 404
+2025-05-19 09:31:07.600 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/swagger/v1/swagger.json - null null
+2025-05-19 09:31:07.724 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 124.0344ms
+2025-05-19 09:32:09.853 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Products - null null
+2025-05-19 09:32:09.873 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-19 09:32:09.877 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-19 09:32:09.878 +05:00 [INF] HTTP GET /api/Products responded 401 in 11.9048 ms
+2025-05-19 09:32:09.880 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Products - 401 0 null 27.1234ms
+2025-05-19 09:35:09.860 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5065/api/User/login - application/json 89
+2025-05-19 09:35:09.882 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.UserController.Login (AtirUz)'
+2025-05-19 09:35:09.957 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ECommerceAPI.Models.User) on controller ECommerceAPI.Controllers.UserController (AtirUz).
+2025-05-19 09:35:12.337 +05:00 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 09:35:12.342 +05:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 09:35:12.348 +05:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 09:35:14.417 +05:00 [INF] Executed DbCommand (149ms) [Parameters=[@__user_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__user_Username_0
+2025-05-19 09:35:16.124 +05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-19 09:35:16.188 +05:00 [INF] Executed action ECommerceAPI.Controllers.UserController.Login (AtirUz) in 6216.0392ms
+2025-05-19 09:35:16.194 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.UserController.Login (AtirUz)'
+2025-05-19 09:35:16.202 +05:00 [INF] HTTP POST /api/User/login responded 200 in 6326.9561 ms
+2025-05-19 09:35:16.226 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5065/api/User/login - 200 null application/json; charset=utf-8 6366.1633ms
+2025-05-19 09:35:41.895 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Categories - null null
+2025-05-19 09:35:42.028 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz)'
+2025-05-19 09:35:42.051 +05:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.CategoryDTO]]] GetCategories() on controller ECommerceAPI.Controllers.CategoriesController (AtirUz).
+2025-05-19 09:35:42.469 +05:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Description], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-19 09:35:42.551 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.CategoryDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 09:35:42.572 +05:00 [INF] Executed action ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz) in 511.8828ms
+2025-05-19 09:35:42.579 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz)'
+2025-05-19 09:35:42.585 +05:00 [INF] HTTP GET /api/Categories responded 200 in 680.4167 ms
+2025-05-19 09:35:42.594 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Categories - 200 null application/json; charset=utf-8 698.0573ms
+2025-05-19 09:36:06.081 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Categories - null null
+2025-05-19 09:36:06.096 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz)'
+2025-05-19 09:36:06.102 +05:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.CategoryDTO]]] GetCategories() on controller ECommerceAPI.Controllers.CategoriesController (AtirUz).
+2025-05-19 09:36:06.320 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Description], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-19 09:36:06.331 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.CategoryDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 09:36:06.337 +05:00 [INF] Executed action ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz) in 226.5227ms
+2025-05-19 09:36:06.344 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz)'
+2025-05-19 09:36:06.349 +05:00 [INF] HTTP GET /api/Categories responded 200 in 260.4050 ms
+2025-05-19 09:36:06.357 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Categories - 200 null application/json; charset=utf-8 275.9882ms
+2025-05-19 09:36:27.287 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Categories - null null
+2025-05-19 09:36:27.300 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz)'
+2025-05-19 09:36:27.304 +05:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.CategoryDTO]]] GetCategories() on controller ECommerceAPI.Controllers.CategoriesController (AtirUz).
+2025-05-19 09:36:27.324 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Description], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-19 09:36:27.334 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.CategoryDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 09:36:27.341 +05:00 [INF] Executed action ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz) in 26.4847ms
+2025-05-19 09:36:27.346 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz)'
+2025-05-19 09:36:27.351 +05:00 [INF] HTTP GET /api/Categories responded 200 in 52.5929 ms
+2025-05-19 09:36:27.362 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Categories - 200 null application/json; charset=utf-8 75.2317ms
+2025-05-19 09:36:40.181 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5065/api/Categories - application/json 61
+2025-05-19 09:36:40.194 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.CategoriesController.PostCategory (AtirUz)'
+2025-05-19 09:36:40.212 +05:00 [INF] Route matched with {action = "PostCategory", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[AtirAPI.DTOs.CategoryDTO]] PostCategory(AtirAPI.DTOs.CategoryCreateDTO) on controller ECommerceAPI.Controllers.CategoriesController (AtirUz).
+2025-05-19 09:36:40.529 +05:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Categories] ([Description], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2025-05-19 09:36:40.617 +05:00 [INF] Executing CreatedAtActionResult, writing value of type 'AtirAPI.DTOs.CategoryDTO'.
+2025-05-19 09:36:40.678 +05:00 [INF] Executed action ECommerceAPI.Controllers.CategoriesController.PostCategory (AtirUz) in 457.6096ms
+2025-05-19 09:36:40.683 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.CategoriesController.PostCategory (AtirUz)'
+2025-05-19 09:36:40.687 +05:00 [INF] HTTP POST /api/Categories responded 201 in 497.1152 ms
+2025-05-19 09:36:40.695 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5065/api/Categories - 201 null application/json; charset=utf-8 514.3756ms
+2025-05-19 09:36:53.346 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Customers - null null
+2025-05-19 09:36:53.355 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.CustomersController.GetCustomers (AtirUz)'
+2025-05-19 09:36:53.372 +05:00 [INF] Route matched with {action = "GetCustomers", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.Models.Customer]]] GetCustomers() on controller ECommerceAPI.Controllers.CustomersController (AtirUz).
+2025-05-19 09:36:53.433 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Address], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber]
+FROM [Customers] AS [c]
+2025-05-19 09:36:53.444 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.Models.Customer, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 09:36:53.471 +05:00 [INF] Executed action ECommerceAPI.Controllers.CustomersController.GetCustomers (AtirUz) in 89.9624ms
+2025-05-19 09:36:53.476 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.CustomersController.GetCustomers (AtirUz)'
+2025-05-19 09:36:53.481 +05:00 [INF] HTTP GET /api/Customers responded 200 in 126.2100 ms
+2025-05-19 09:36:53.489 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Customers - 200 null application/json; charset=utf-8 142.2485ms
+2025-05-19 09:37:06.517 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Orders?page=1&pageSize=10 - null null
+2025-05-19 09:37:06.525 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.OrdersController.GetOrders (AtirUz)'
+2025-05-19 09:37:06.535 +05:00 [INF] Route matched with {action = "GetOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.Models.Order]]] GetOrders(Int32, Int32) on controller ECommerceAPI.Controllers.OrdersController (AtirUz).
+2025-05-19 09:37:06.612 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-05-19 09:37:06.617 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-05-19 09:37:06.942 +05:00 [INF] Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [o1].[Id], [o1].[CustomerId], [o1].[OrderDate], [o1].[PaymentStatus], [o1].[TotalAmount], [s].[Id], [s].[OrderId], [s].[Price], [s].[ProductId], [s].[Quantity], [s].[Id0], [s].[CategoryId], [s].[Description], [s].[ImageUrl], [s].[Name], [s].[Price0], [s].[Stock]
+FROM (
+    SELECT [o].[Id], [o].[CustomerId], [o].[OrderDate], [o].[PaymentStatus], [o].[TotalAmount]
+    FROM [Orders] AS [o]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [o1]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[Stock]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [s] ON [o1].[Id] = [s].[OrderId]
+ORDER BY [o1].[Id], [s].[Id]
+2025-05-19 09:37:06.950 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.Models.Order, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 09:37:06.981 +05:00 [INF] Executed action ECommerceAPI.Controllers.OrdersController.GetOrders (AtirUz) in 439.7341ms
+2025-05-19 09:37:06.985 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.OrdersController.GetOrders (AtirUz)'
+2025-05-19 09:37:06.989 +05:00 [INF] HTTP GET /api/Orders responded 200 in 465.2584 ms
+2025-05-19 09:37:06.995 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Orders?page=1&pageSize=10 - 200 null application/json; charset=utf-8 478.4771ms
+2025-05-19 09:37:15.574 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5065/api/Orders - application/json 382
+2025-05-19 09:37:15.583 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz)'
+2025-05-19 09:37:15.597 +05:00 [INF] Route matched with {action = "PostOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[AtirAPI.Models.Order]] PostOrder(AtirUz.DTOs.OrderDTO) on controller ECommerceAPI.Controllers.OrdersController (AtirUz).
+2025-05-19 09:37:15.713 +05:00 [INF] Executed DbCommand (17ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-05-19 09:37:15.722 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-05-19 09:37:15.727 +05:00 [INF] Executed action ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz) in 123.9615ms
+2025-05-19 09:37:15.731 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz)'
+2025-05-19 09:37:15.735 +05:00 [INF] HTTP POST /api/Orders responded 400 in 152.7647 ms
+2025-05-19 09:37:15.742 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5065/api/Orders - 400 null text/plain; charset=utf-8 167.4541ms
+2025-05-19 09:38:00.101 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5065/api/Orders - application/json 217
+2025-05-19 09:38:00.113 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz)'
+2025-05-19 09:38:00.117 +05:00 [INF] Route matched with {action = "PostOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[AtirAPI.Models.Order]] PostOrder(AtirUz.DTOs.OrderDTO) on controller ECommerceAPI.Controllers.OrdersController (AtirUz).
+2025-05-19 09:38:00.136 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-05-19 09:38:00.211 +05:00 [INF] Executed action ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz) in 85.3947ms
+2025-05-19 09:38:00.217 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz)'
+2025-05-19 09:38:00.220 +05:00 [INF] HTTP POST /api/Orders responded 400 in 107.9921 ms
+2025-05-19 09:38:00.227 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5065/api/Orders - 400 null application/problem+json; charset=utf-8 126.3336ms
+2025-05-19 09:38:48.185 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Customers - null null
+2025-05-19 09:38:48.195 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.CustomersController.GetCustomers (AtirUz)'
+2025-05-19 09:38:48.201 +05:00 [INF] Route matched with {action = "GetCustomers", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.Models.Customer]]] GetCustomers() on controller ECommerceAPI.Controllers.CustomersController (AtirUz).
+2025-05-19 09:38:48.218 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Address], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber]
+FROM [Customers] AS [c]
+2025-05-19 09:38:48.228 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.Models.Customer, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 09:38:48.235 +05:00 [INF] Executed action ECommerceAPI.Controllers.CustomersController.GetCustomers (AtirUz) in 26.7689ms
+2025-05-19 09:38:48.241 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.CustomersController.GetCustomers (AtirUz)'
+2025-05-19 09:38:48.246 +05:00 [INF] HTTP GET /api/Customers responded 200 in 51.5899 ms
+2025-05-19 09:38:48.255 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Customers - 200 null application/json; charset=utf-8 69.7843ms
+2025-05-19 09:39:47.353 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5065/api/Orders - application/json 297
+2025-05-19 09:39:47.365 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz)'
+2025-05-19 09:39:47.369 +05:00 [INF] Route matched with {action = "PostOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[AtirAPI.Models.Order]] PostOrder(AtirUz.DTOs.OrderDTO) on controller ECommerceAPI.Controllers.OrdersController (AtirUz).
+2025-05-19 09:39:47.377 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-05-19 09:39:47.379 +05:00 [INF] Executed action ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz) in 5.7818ms
+2025-05-19 09:39:47.388 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz)'
+2025-05-19 09:39:47.393 +05:00 [INF] HTTP POST /api/Orders responded 400 in 29.2342 ms
+2025-05-19 09:39:47.396 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5065/api/Orders - 400 null application/problem+json; charset=utf-8 43.2086ms
+2025-05-19 09:40:22.261 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5065/api/Orders - application/json 498
+2025-05-19 09:40:22.274 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz)'
+2025-05-19 09:40:22.277 +05:00 [INF] Route matched with {action = "PostOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[AtirAPI.Models.Order]] PostOrder(AtirUz.DTOs.OrderDTO) on controller ECommerceAPI.Controllers.OrdersController (AtirUz).
+2025-05-19 09:40:22.302 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-05-19 09:40:22.410 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-05-19 09:40:22.433 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-05-19 09:40:22.439 +05:00 [INF] Executed action ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz) in 155.7816ms
+2025-05-19 09:40:22.445 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz)'
+2025-05-19 09:40:22.449 +05:00 [INF] HTTP POST /api/Orders responded 400 in 176.8288 ms
+2025-05-19 09:40:22.455 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5065/api/Orders - 400 null text/plain; charset=utf-8 194.618ms
+2025-05-19 09:40:54.223 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5065/api/Orders - application/json 498
+2025-05-19 09:40:54.236 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz)'
+2025-05-19 09:40:54.241 +05:00 [INF] Route matched with {action = "PostOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[AtirAPI.Models.Order]] PostOrder(AtirUz.DTOs.OrderDTO) on controller ECommerceAPI.Controllers.OrdersController (AtirUz).
+2025-05-19 09:40:54.260 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-05-19 09:40:54.285 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-05-19 09:40:54.298 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-05-19 09:40:54.304 +05:00 [INF] Executed action ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz) in 54.1905ms
+2025-05-19 09:40:54.310 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz)'
+2025-05-19 09:40:54.315 +05:00 [INF] HTTP POST /api/Orders responded 400 in 79.6736 ms
+2025-05-19 09:40:54.323 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5065/api/Orders - 400 null text/plain; charset=utf-8 100.3895ms
+2025-05-19 09:41:17.797 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Products - null null
+2025-05-19 09:41:17.810 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 09:41:17.825 +05:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.ProductDTO]]] GetProducts() on controller ECommerceAPI.Controllers.ProductsController (AtirUz).
+2025-05-19 09:41:17.887 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock], [c].[Id], [c].[Description], [c].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+2025-05-19 09:41:17.983 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.ProductDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 09:41:18.002 +05:00 [INF] Executed action ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz) in 168.6511ms
+2025-05-19 09:41:18.008 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 09:41:18.014 +05:00 [INF] HTTP GET /api/Products responded 200 in 204.7260 ms
+2025-05-19 09:41:18.021 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Products - 200 null application/json; charset=utf-8 224.1053ms
+2025-05-19 09:41:32.516 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5065/api/Orders - application/json 496
+2025-05-19 09:41:32.529 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz)'
+2025-05-19 09:41:32.537 +05:00 [INF] Route matched with {action = "PostOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[AtirAPI.Models.Order]] PostOrder(AtirUz.DTOs.OrderDTO) on controller ECommerceAPI.Controllers.OrdersController (AtirUz).
+2025-05-19 09:41:32.551 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-05-19 09:41:32.604 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-05-19 09:41:32.618 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-05-19 09:41:32.625 +05:00 [INF] Executed action ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz) in 84.069ms
+2025-05-19 09:41:32.631 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz)'
+2025-05-19 09:41:32.636 +05:00 [INF] HTTP POST /api/Orders responded 400 in 111.5531 ms
+2025-05-19 09:41:32.644 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5065/api/Orders - 400 null text/plain; charset=utf-8 127.9034ms
+2025-05-19 09:42:29.605 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5065/api/Orders - application/json 416
+2025-05-19 09:42:29.615 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz)'
+2025-05-19 09:42:29.616 +05:00 [INF] Route matched with {action = "PostOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[AtirAPI.Models.Order]] PostOrder(AtirUz.DTOs.OrderDTO) on controller ECommerceAPI.Controllers.OrdersController (AtirUz).
+2025-05-19 09:42:29.632 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-05-19 09:42:29.646 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-05-19 09:42:29.867 +05:00 [INF] Executed DbCommand (18ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p5='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([CustomerId], [OrderDate], [PaymentStatus], [TotalAmount])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+UPDATE [Products] SET [Stock] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-05-19 09:42:29.902 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@p6='?' (DbType = Int32), @p7='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [OrderItems] ([OrderId], [Price], [ProductId], [Quantity])
+OUTPUT INSERTED.[Id]
+VALUES (@p6, @p7, @p8, @p9);
+2025-05-19 09:42:30.041 +05:00 [INF] Executed DbCommand (45ms) [Parameters=[@__order_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [o1].[Id], [o1].[CustomerId], [o1].[OrderDate], [o1].[PaymentStatus], [o1].[TotalAmount], [s].[Id], [s].[OrderId], [s].[Price], [s].[ProductId], [s].[Quantity], [s].[Id0], [s].[CategoryId], [s].[Description], [s].[ImageUrl], [s].[Name], [s].[Price0], [s].[Stock]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[CustomerId], [o].[OrderDate], [o].[PaymentStatus], [o].[TotalAmount]
+    FROM [Orders] AS [o]
+    WHERE [o].[Id] = @__order_Id_0
+) AS [o1]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[Stock]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [s] ON [o1].[Id] = [s].[OrderId]
+ORDER BY [o1].[Id], [s].[Id]
+2025-05-19 09:42:30.077 +05:00 [INF] Order created for CustomerId 1 with TotalAmount 999.99
+2025-05-19 09:42:30.088 +05:00 [INF] Executing CreatedAtActionResult, writing value of type 'AtirAPI.Models.Order'.
+2025-05-19 09:42:30.116 +05:00 [INF] Executed action ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz) in 496.0137ms
+2025-05-19 09:42:30.121 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.OrdersController.PostOrder (AtirUz)'
+2025-05-19 09:42:30.126 +05:00 [INF] HTTP POST /api/Orders responded 201 in 511.7235 ms
+2025-05-19 09:42:30.135 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5065/api/Orders - 201 null application/json; charset=utf-8 529.5733ms
+2025-05-19 09:44:02.282 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5065/api/Customers - application/json 154
+2025-05-19 09:44:02.296 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.CustomersController.PostCustomer (AtirUz)'
+2025-05-19 09:44:02.305 +05:00 [INF] Route matched with {action = "PostCustomer", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[AtirAPI.Models.Customer]] PostCustomer(AtirAPI.Models.Customer) on controller ECommerceAPI.Controllers.CustomersController (AtirUz).
+2025-05-19 09:44:02.342 +05:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Address], [Email], [FirstName], [LastName], [PhoneNumber])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-05-19 09:44:02.356 +05:00 [INF] Executing CreatedAtActionResult, writing value of type 'AtirAPI.Models.Customer'.
+2025-05-19 09:44:02.364 +05:00 [INF] Executed action ECommerceAPI.Controllers.CustomersController.PostCustomer (AtirUz) in 55.4142ms
+2025-05-19 09:44:02.369 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.CustomersController.PostCustomer (AtirUz)'
+2025-05-19 09:44:02.374 +05:00 [INF] HTTP POST /api/Customers responded 201 in 82.5382 ms
+2025-05-19 09:44:02.381 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5065/api/Customers - 201 null application/json; charset=utf-8 99.1891ms
+2025-05-19 10:04:37.404 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/swagger/index.html - null null
+2025-05-19 10:04:37.521 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/swagger/index.html - 200 null text/html;charset=utf-8 116.4387ms
+2025-05-19 10:04:38.548 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/swagger/v1/swagger.json - null null
+2025-05-19 10:04:38.591 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 42.8205ms
+2025-05-19 10:04:41.677 +05:00 [INF] Application is shutting down...
+2025-05-19 10:04:56.769 +05:00 [INF] User profile is available. Using 'C:\Users\muham\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-19 10:04:56.906 +05:00 [INF] Now listening on: http://localhost:5065
+2025-05-19 10:04:56.911 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-19 10:04:56.912 +05:00 [INF] Hosting environment: Development
+2025-05-19 10:04:56.915 +05:00 [INF] Content root path: C:\C#\AtirUz
+2025-05-19 10:05:00.035 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/swagger/index.html - null null
+2025-05-19 10:05:00.235 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/swagger/index.html - 200 null text/html;charset=utf-8 204.8171ms
+2025-05-19 10:05:00.560 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/swagger/v1/swagger.json - null null
+2025-05-19 10:05:00.811 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 254.3284ms
+2025-05-19 10:05:08.303 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Products - null null
+2025-05-19 10:05:08.348 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-19 10:05:08.426 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:05:08.480 +05:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.ProductDTO]]] GetProducts() on controller ECommerceAPI.Controllers.ProductsController (AtirUz).
+2025-05-19 10:05:10.635 +05:00 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 10:05:10.644 +05:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 10:05:10.651 +05:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 10:05:12.726 +05:00 [INF] Executed DbCommand (100ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock], [c].[Id], [c].[Description], [c].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+2025-05-19 10:05:13.093 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.ProductDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 10:05:13.203 +05:00 [INF] Executed action ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz) in 4702.7733ms
+2025-05-19 10:05:13.209 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:05:13.226 +05:00 [INF] HTTP GET /api/Products responded 200 in 4882.3447 ms
+2025-05-19 10:05:13.263 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Products - 200 null application/json; charset=utf-8 4960.5252ms
+2025-05-19 10:07:24.137 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Products/ - null null
+2025-05-19 10:07:24.162 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:07:24.169 +05:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.ProductDTO]]] GetProducts() on controller ECommerceAPI.Controllers.ProductsController (AtirUz).
+2025-05-19 10:07:24.240 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock], [c].[Id], [c].[Description], [c].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+2025-05-19 10:07:24.257 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.ProductDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 10:07:24.266 +05:00 [INF] Executed action ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz) in 83.7966ms
+2025-05-19 10:07:24.272 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:07:24.277 +05:00 [INF] HTTP GET /api/Products/ responded 200 in 118.3010 ms
+2025-05-19 10:07:24.287 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Products/ - 200 null application/json; charset=utf-8 149.6074ms
+2025-05-19 10:07:41.584 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Products/ - null null
+2025-05-19 10:07:41.607 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:07:41.614 +05:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.ProductDTO]]] GetProducts() on controller ECommerceAPI.Controllers.ProductsController (AtirUz).
+2025-05-19 10:07:41.785 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock], [c].[Id], [c].[Description], [c].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+2025-05-19 10:07:41.790 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.ProductDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 10:07:41.792 +05:00 [INF] Executed action ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz) in 169.9731ms
+2025-05-19 10:07:41.794 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:07:41.796 +05:00 [INF] HTTP GET /api/Products/ responded 200 in 194.4190 ms
+2025-05-19 10:07:41.798 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Products/ - 200 null application/json; charset=utf-8 214.3032ms
+2025-05-19 10:07:42.783 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Products/ - null null
+2025-05-19 10:07:42.798 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:07:42.804 +05:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.ProductDTO]]] GetProducts() on controller ECommerceAPI.Controllers.ProductsController (AtirUz).
+2025-05-19 10:07:42.823 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock], [c].[Id], [c].[Description], [c].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+2025-05-19 10:07:42.837 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.ProductDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 10:07:42.846 +05:00 [INF] Executed action ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz) in 31.7326ms
+2025-05-19 10:07:42.851 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:07:42.857 +05:00 [INF] HTTP GET /api/Products/ responded 200 in 59.0202 ms
+2025-05-19 10:07:42.868 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Products/ - 200 null application/json; charset=utf-8 85.3299ms
+2025-05-19 10:08:13.376 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Products/ - null null
+2025-05-19 10:08:13.385 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:08:13.389 +05:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.ProductDTO]]] GetProducts() on controller ECommerceAPI.Controllers.ProductsController (AtirUz).
+2025-05-19 10:08:13.405 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock], [c].[Id], [c].[Description], [c].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+2025-05-19 10:08:13.411 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.ProductDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 10:08:13.414 +05:00 [INF] Executed action ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz) in 18.1242ms
+2025-05-19 10:08:13.417 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:08:13.419 +05:00 [INF] HTTP GET /api/Products/ responded 200 in 34.3615 ms
+2025-05-19 10:08:13.422 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Products/ - 200 null application/json; charset=utf-8 46.4216ms
+2025-05-19 10:08:26.717 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Products/ - null null
+2025-05-19 10:08:26.732 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:08:26.738 +05:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.ProductDTO]]] GetProducts() on controller ECommerceAPI.Controllers.ProductsController (AtirUz).
+2025-05-19 10:08:26.751 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock], [c].[Id], [c].[Description], [c].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+2025-05-19 10:08:26.757 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.ProductDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 10:08:26.761 +05:00 [INF] Executed action ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz) in 17.363ms
+2025-05-19 10:08:26.766 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:08:26.768 +05:00 [INF] HTTP GET /api/Products/ responded 200 in 36.2350 ms
+2025-05-19 10:08:26.774 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Products/ - 200 null application/json; charset=utf-8 56.5953ms
+2025-05-19 10:09:59.939 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Products - null null
+2025-05-19 10:09:59.950 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:09:59.956 +05:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.ProductDTO]]] GetProducts() on controller ECommerceAPI.Controllers.ProductsController (AtirUz).
+2025-05-19 10:09:59.983 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock], [c].[Id], [c].[Description], [c].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+2025-05-19 10:09:59.998 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.ProductDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 10:10:00.010 +05:00 [INF] Executed action ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz) in 41.7117ms
+2025-05-19 10:10:00.016 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:10:00.019 +05:00 [INF] HTTP GET /api/Products responded 200 in 68.8894 ms
+2025-05-19 10:10:00.024 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Products - 200 null application/json; charset=utf-8 84.8828ms
+2025-05-19 10:11:11.169 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Products/ - null null
+2025-05-19 10:11:11.184 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:11:11.190 +05:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.ProductDTO]]] GetProducts() on controller ECommerceAPI.Controllers.ProductsController (AtirUz).
+2025-05-19 10:11:11.213 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock], [c].[Id], [c].[Description], [c].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+2025-05-19 10:11:11.226 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.ProductDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 10:11:11.233 +05:00 [INF] Executed action ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz) in 33.3416ms
+2025-05-19 10:11:11.240 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:11:11.244 +05:00 [INF] HTTP GET /api/Products/ responded 200 in 61.1499 ms
+2025-05-19 10:11:11.254 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Products/ - 200 null application/json; charset=utf-8 84.8183ms
+2025-05-19 10:11:48.966 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Products - null null
+2025-05-19 10:11:48.980 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:11:48.984 +05:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.ProductDTO]]] GetProducts() on controller ECommerceAPI.Controllers.ProductsController (AtirUz).
+2025-05-19 10:11:49.003 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock], [c].[Id], [c].[Description], [c].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+2025-05-19 10:11:49.019 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.ProductDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 10:11:49.029 +05:00 [INF] Executed action ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz) in 35.5181ms
+2025-05-19 10:11:49.037 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:11:49.047 +05:00 [INF] HTTP GET /api/Products responded 200 in 67.4586 ms
+2025-05-19 10:11:49.058 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Products - 200 null application/json; charset=utf-8 91.5347ms
+2025-05-19 10:14:55.594 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Products - null null
+2025-05-19 10:14:55.611 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:14:55.616 +05:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.ProductDTO]]] GetProducts() on controller ECommerceAPI.Controllers.ProductsController (AtirUz).
+2025-05-19 10:14:55.640 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock], [c].[Id], [c].[Description], [c].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+2025-05-19 10:14:55.653 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.ProductDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 10:14:55.661 +05:00 [INF] Executed action ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz) in 35.9603ms
+2025-05-19 10:14:55.674 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:14:55.680 +05:00 [INF] HTTP GET /api/Products responded 200 in 70.5520 ms
+2025-05-19 10:14:55.690 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Products - 200 null application/json; charset=utf-8 96.4613ms
+2025-05-19 10:15:09.552 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Products - null null
+2025-05-19 10:15:09.564 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:15:09.570 +05:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.ProductDTO]]] GetProducts() on controller ECommerceAPI.Controllers.ProductsController (AtirUz).
+2025-05-19 10:15:09.591 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock], [c].[Id], [c].[Description], [c].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+2025-05-19 10:15:09.600 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.ProductDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 10:15:09.608 +05:00 [INF] Executed action ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz) in 27.2729ms
+2025-05-19 10:15:09.615 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:15:09.621 +05:00 [INF] HTTP GET /api/Products responded 200 in 57.8688 ms
+2025-05-19 10:15:09.631 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Products - 200 null application/json; charset=utf-8 78.9825ms
+2025-05-19 10:16:39.564 +05:00 [INF] Application is shutting down...
+2025-05-19 10:17:09.113 +05:00 [INF] User profile is available. Using 'C:\Users\muham\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-19 10:17:09.514 +05:00 [INF] Now listening on: http://localhost:5065
+2025-05-19 10:17:09.524 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-19 10:17:09.529 +05:00 [INF] Hosting environment: Development
+2025-05-19 10:17:09.533 +05:00 [INF] Content root path: C:\C#\AtirUz
+2025-05-19 10:17:21.769 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Products - null null
+2025-05-19 10:17:21.893 +05:00 [INF] CORS policy execution successful.
+2025-05-19 10:17:21.942 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-19 10:17:22.013 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:17:22.059 +05:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.ProductDTO]]] GetProducts() on controller ECommerceAPI.Controllers.ProductsController (AtirUz).
+2025-05-19 10:17:24.946 +05:00 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 10:17:24.957 +05:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 10:17:24.965 +05:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 10:17:27.651 +05:00 [INF] Executed DbCommand (110ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock], [c].[Id], [c].[Description], [c].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+2025-05-19 10:17:28.102 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.ProductDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 10:17:28.315 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Products - null null
+2025-05-19 10:17:28.320 +05:00 [INF] Executed action ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz) in 6240.9042ms
+2025-05-19 10:17:28.335 +05:00 [INF] CORS policy execution successful.
+2025-05-19 10:17:28.350 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:17:28.362 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:17:28.370 +05:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.ProductDTO]]] GetProducts() on controller ECommerceAPI.Controllers.ProductsController (AtirUz).
+2025-05-19 10:17:28.372 +05:00 [INF] HTTP GET /api/Products responded 200 in 6426.7613 ms
+2025-05-19 10:17:28.427 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Products - 200 null application/json; charset=utf-8 6661.2548ms
+2025-05-19 10:17:28.489 +05:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[Stock], [c].[Id], [c].[Description], [c].[Name]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+2025-05-19 10:17:28.506 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AtirAPI.DTOs.ProductDTO, AtirUz, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-19 10:17:28.516 +05:00 [INF] Executed action ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz) in 137.3263ms
+2025-05-19 10:17:28.523 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.ProductsController.GetProducts (AtirUz)'
+2025-05-19 10:17:28.529 +05:00 [INF] HTTP GET /api/Products responded 200 in 173.8164 ms
+2025-05-19 10:17:28.540 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Products - 200 null application/json; charset=utf-8 224.2408ms
+2025-05-19 11:05:01.161 +05:00 [INF] User profile is available. Using 'C:\Users\muham\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-19 11:05:01.296 +05:00 [INF] Now listening on: http://localhost:5065
+2025-05-19 11:05:01.300 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-19 11:05:01.301 +05:00 [INF] Hosting environment: Development
+2025-05-19 11:05:01.301 +05:00 [INF] Content root path: C:\C#\AtirUz
+2025-05-19 11:05:34.038 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/swagger/v1/swagger.json - null null
+2025-05-19 11:05:34.213 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 176.5648ms
+2025-05-19 11:16:54.404 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/swagger/v1/swagger.json - null null
+2025-05-19 11:16:54.425 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.7541ms
+2025-05-19 11:20:27.161 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Categories - null null
+2025-05-19 11:20:27.179 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-19 11:20:27.230 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-19 11:20:27.233 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-19 11:20:27.235 +05:00 [INF] HTTP GET /api/Categories responded 401 in 58.3006 ms
+2025-05-19 11:20:27.237 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Categories - 401 0 null 76.0359ms
+2025-05-19 11:20:44.441 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5065/api/Categories - application/json 49
+2025-05-19 11:20:44.447 +05:00 [INF] CORS policy execution successful.
+2025-05-19 11:20:44.454 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2025-05-19 11:20:44.456 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-19 11:20:44.457 +05:00 [INF] HTTP POST /api/Categories responded 401 in 8.3812 ms
+2025-05-19 11:20:44.461 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5065/api/Categories - 401 0 null 19.4744ms
+2025-05-19 11:21:27.231 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Categories - null null
+2025-05-19 11:21:27.237 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-19 11:21:27.238 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-19 11:21:27.239 +05:00 [INF] HTTP GET /api/Categories responded 401 in 4.3165 ms
+2025-05-19 11:21:27.242 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Categories - 401 0 null 10.8223ms
+2025-05-19 11:36:39.755 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Categories - null null
+2025-05-19 11:36:39.757 +05:00 [INF] CORS policy execution successful.
+2025-05-19 11:36:39.758 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-19 11:36:39.759 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-19 11:36:39.760 +05:00 [INF] HTTP GET /api/Categories responded 401 in 2.0039 ms
+2025-05-19 11:36:39.762 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Categories - 401 0 null 7.1194ms
+2025-05-19 11:36:39.765 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Categories - null null
+2025-05-19 11:36:39.768 +05:00 [INF] CORS policy execution successful.
+2025-05-19 11:36:39.770 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-19 11:36:39.772 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-19 11:36:39.773 +05:00 [INF] HTTP GET /api/Categories responded 401 in 3.5396 ms
+2025-05-19 11:36:39.776 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Categories - 401 0 null 10.448ms
+2025-05-19 11:37:24.346 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5065/api/Categories - null null
+2025-05-19 11:37:24.348 +05:00 [INF] CORS policy execution successful.
+2025-05-19 11:37:24.350 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5065/api/Categories - 204 null null 3.4826ms
+2025-05-19 11:37:24.352 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5065/api/Categories - application/json 16
+2025-05-19 11:37:24.354 +05:00 [INF] CORS policy execution successful.
+2025-05-19 11:37:24.354 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2025-05-19 11:37:24.355 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-19 11:37:24.356 +05:00 [INF] HTTP POST /api/Categories responded 401 in 1.9342 ms
+2025-05-19 11:37:24.358 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5065/api/Categories - 401 0 null 5.9534ms
+2025-05-19 11:37:51.024 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Categories - null null
+2025-05-19 11:37:51.028 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-19 11:37:51.030 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-19 11:37:51.030 +05:00 [INF] HTTP GET /api/Categories responded 401 in 2.2895 ms
+2025-05-19 11:37:51.032 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Categories - 401 0 null 7.712ms
+2025-05-19 11:42:28.931 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Categories - null null
+2025-05-19 11:42:28.933 +05:00 [INF] CORS policy execution successful.
+2025-05-19 11:42:28.934 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-19 11:42:28.935 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-19 11:42:28.935 +05:00 [INF] HTTP GET /api/Categories responded 401 in 1.3977 ms
+2025-05-19 11:42:28.936 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Categories - 401 0 null 5.926ms
+2025-05-19 11:42:28.940 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Categories - null null
+2025-05-19 11:42:28.941 +05:00 [INF] CORS policy execution successful.
+2025-05-19 11:42:28.942 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-19 11:42:28.943 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-19 11:42:28.943 +05:00 [INF] HTTP GET /api/Categories responded 401 in 1.6278 ms
+2025-05-19 11:42:28.945 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Categories - 401 0 null 5.1436ms
+2025-05-19 11:43:36.271 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5065/api/Categories - null null
+2025-05-19 11:43:36.273 +05:00 [INF] CORS policy execution successful.
+2025-05-19 11:43:36.273 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5065/api/Categories - 204 null null 2.1705ms
+2025-05-19 11:43:36.275 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5065/api/Categories - application/json 74
+2025-05-19 11:43:36.277 +05:00 [INF] CORS policy execution successful.
+2025-05-19 11:43:36.277 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2025-05-19 11:43:36.278 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-19 11:43:36.279 +05:00 [INF] HTTP POST /api/Categories responded 401 in 1.4442 ms
+2025-05-19 11:43:36.280 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5065/api/Categories - 401 0 null 4.5827ms
+2025-05-19 11:46:03.582 +05:00 [INF] Application is shutting down...
+2025-05-19 11:46:11.735 +05:00 [INF] User profile is available. Using 'C:\Users\muham\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-19 11:46:11.817 +05:00 [INF] Now listening on: http://localhost:5065
+2025-05-19 11:46:11.820 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-19 11:46:11.821 +05:00 [INF] Hosting environment: Development
+2025-05-19 11:46:11.822 +05:00 [INF] Content root path: C:\C#\AtirUz
+2025-05-19 11:49:11.071 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Categories - null null
+2025-05-19 11:49:11.099 +05:00 [INF] CORS policy execution successful.
+2025-05-19 11:49:11.113 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-19 11:49:11.155 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz)'
+2025-05-19 11:49:11.181 +05:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.CategoryDTO]]] GetCategories() on controller ECommerceAPI.Controllers.CategoriesController (AtirUz).
+2025-05-19 11:49:11.928 +05:00 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 11:49:11.930 +05:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 11:49:11.931 +05:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-19 11:49:29.795 +05:00 [ERR] An error occurred using the connection to database 'AtirUz' on server 'localhost,1433'.
+2025-05-19 11:49:29.819 +05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ECommerceAPI.Data.ECommerceDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+2025-05-19 11:49:29.831 +05:00 [INF] Executed action ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz) in 18645.0263ms
+2025-05-19 11:49:29.841 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz)'
+2025-05-19 11:49:29.844 +05:00 [ERR] An error occurred while processing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECommerceAPI.Controllers.CategoriesController.GetCategories() in C:\C#\AtirUz\Controllers\CategoriesController.cs:line 29
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ECommerceAPI.Middlewares.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\C#\AtirUz\Middlewares\ErrorHandlerMiddleware.cs:line 21
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+2025-05-19 11:49:29.922 +05:00 [ERR] HTTP GET /api/Categories responded 500 in 18810.8268 ms
+2025-05-19 11:49:29.924 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Categories - null null
+2025-05-19 11:49:29.928 +05:00 [INF] CORS policy execution successful.
+2025-05-19 11:49:29.930 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz)'
+2025-05-19 11:49:29.931 +05:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.CategoryDTO]]] GetCategories() on controller ECommerceAPI.Controllers.CategoriesController (AtirUz).
+2025-05-19 11:49:29.931 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Categories - 500 null application/json 18861.8929ms
+2025-05-19 11:49:29.959 +05:00 [ERR] An error occurred using the connection to database 'AtirUz' on server 'localhost,1433'.
+2025-05-19 11:49:29.961 +05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ECommerceAPI.Data.ECommerceDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+2025-05-19 11:49:29.966 +05:00 [INF] Executed action ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz) in 33.3077ms
+2025-05-19 11:49:29.967 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz)'
+2025-05-19 11:49:29.968 +05:00 [ERR] An error occurred while processing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECommerceAPI.Controllers.CategoriesController.GetCategories() in C:\C#\AtirUz\Controllers\CategoriesController.cs:line 29
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ECommerceAPI.Middlewares.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\C#\AtirUz\Middlewares\ErrorHandlerMiddleware.cs:line 21
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+2025-05-19 11:49:29.977 +05:00 [ERR] HTTP GET /api/Categories responded 500 in 48.1474 ms
+2025-05-19 11:49:29.979 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Categories - 500 null application/json 55.6131ms
+2025-05-19 11:49:41.819 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Categories - null null
+2025-05-19 11:49:41.821 +05:00 [INF] CORS policy execution successful.
+2025-05-19 11:49:41.824 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz)'
+2025-05-19 11:49:41.825 +05:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.CategoryDTO]]] GetCategories() on controller ECommerceAPI.Controllers.CategoriesController (AtirUz).
+2025-05-19 11:49:58.886 +05:00 [ERR] An error occurred using the connection to database 'AtirUz' on server 'localhost,1433'.
+2025-05-19 11:49:58.889 +05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ECommerceAPI.Data.ECommerceDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+2025-05-19 11:49:58.898 +05:00 [INF] Executed action ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz) in 17070.8386ms
+2025-05-19 11:49:58.899 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz)'
+2025-05-19 11:49:58.900 +05:00 [ERR] An error occurred while processing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECommerceAPI.Controllers.CategoriesController.GetCategories() in C:\C#\AtirUz\Controllers\CategoriesController.cs:line 29
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ECommerceAPI.Middlewares.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\C#\AtirUz\Middlewares\ErrorHandlerMiddleware.cs:line 21
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+2025-05-19 11:49:58.911 +05:00 [ERR] HTTP GET /api/Categories responded 500 in 17088.3297 ms
+2025-05-19 11:49:58.912 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5065/api/Categories - null null
+2025-05-19 11:49:58.913 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Categories - 500 null application/json 17093.5985ms
+2025-05-19 11:49:58.915 +05:00 [INF] CORS policy execution successful.
+2025-05-19 11:49:58.918 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz)'
+2025-05-19 11:49:58.920 +05:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AtirAPI.DTOs.CategoryDTO]]] GetCategories() on controller ECommerceAPI.Controllers.CategoriesController (AtirUz).
+2025-05-19 11:49:58.922 +05:00 [ERR] An error occurred using the connection to database 'AtirUz' on server 'localhost,1433'.
+2025-05-19 11:49:58.925 +05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'ECommerceAPI.Data.ECommerceDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+2025-05-19 11:49:58.930 +05:00 [INF] Executed action ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz) in 9.1174ms
+2025-05-19 11:49:58.931 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.CategoriesController.GetCategories (AtirUz)'
+2025-05-19 11:49:58.932 +05:00 [ERR] An error occurred while processing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ECommerceAPI.Controllers.CategoriesController.GetCategories() in C:\C#\AtirUz\Controllers\CategoriesController.cs:line 29
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ECommerceAPI.Middlewares.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\C#\AtirUz\Middlewares\ErrorHandlerMiddleware.cs:line 21
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+2025-05-19 11:49:58.940 +05:00 [ERR] HTTP GET /api/Categories responded 500 in 22.2935 ms
+2025-05-19 11:49:58.942 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5065/api/Categories - 500 null application/json 29.5438ms
+2025-05-19 11:50:35.531 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5065/api/Categories - null null
+2025-05-19 11:50:35.532 +05:00 [INF] CORS policy execution successful.
+2025-05-19 11:50:35.534 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5065/api/Categories - 204 null null 3.0637ms
+2025-05-19 11:50:35.536 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5065/api/Categories - application/json 70
+2025-05-19 11:50:35.538 +05:00 [INF] CORS policy execution successful.
+2025-05-19 11:50:35.539 +05:00 [INF] Executing endpoint 'ECommerceAPI.Controllers.CategoriesController.PostCategory (AtirUz)'
+2025-05-19 11:50:35.547 +05:00 [INF] Route matched with {action = "PostCategory", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[AtirAPI.DTOs.CategoryDTO]] PostCategory(AtirAPI.DTOs.CategoryCreateDTO) on controller ECommerceAPI.Controllers.CategoriesController (AtirUz).
+2025-05-19 11:50:35.586 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-05-19 11:50:35.615 +05:00 [INF] Executed action ECommerceAPI.Controllers.CategoriesController.PostCategory (AtirUz) in 66.5273ms
+2025-05-19 11:50:35.616 +05:00 [INF] Executed endpoint 'ECommerceAPI.Controllers.CategoriesController.PostCategory (AtirUz)'
+2025-05-19 11:50:35.618 +05:00 [INF] HTTP POST /api/Categories responded 400 in 79.1253 ms
+2025-05-19 11:50:35.619 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5065/api/Categories - 400 null application/problem+json; charset=utf-8 83.5425ms
+2025-05-19 16:03:08.829 +05:00 [INF] User profile is available. Using 'C:\Users\muham\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-19 16:03:08.962 +05:00 [INF] Now listening on: http://localhost:5065
+2025-05-19 16:03:08.965 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-19 16:03:08.965 +05:00 [INF] Hosting environment: Development
+2025-05-19 16:03:08.966 +05:00 [INF] Content root path: C:\C#\AtirUz
